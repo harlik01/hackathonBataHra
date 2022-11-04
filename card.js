@@ -1,5 +1,5 @@
 class Card {
-    constructor(imgPath, name, role, text, bgColor, optionNo, optionYes, rarity, unique, pack) {
+    constructor(imgPath, name, role, text, bgColor, optionNo, optionYes, unique, rarity, pack) {
         this.imgPath = imgPath;
         this.name = name;
         this.role = role;
@@ -38,4 +38,7 @@ function nextCard() {
     }
     console.log("Random: " + randomNum);
     console.log("Range:" + numRarity);
+    // Generate card from range
+    
+
 }
