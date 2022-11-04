@@ -36,10 +36,34 @@ function nextCard() {
             break;
         }
     }
-    console.log("Random: " + randomNum);
-    console.log("Range:" + numRarity);
+
     // Generate card from range
+    console.log("random: " + randomNum);
+    console.log("numRarity: " + numRarity);
+
+    let randomCardIndex = Math.floor(Math.random() * rarityQuantity[numRarity - 1].length);
+    let generatedCard = gameCards[rarityQuantity[numRarity - 1][randomCardIndex]];
     
-    
+    console.log("randomCardIndex: " + randomCardIndex);
+    console.log("generatedCard: " + generatedCard.text);
+
+    // Set next card
+    setNewCard(generatedCard);
+
+}
+
+function setNewCard(generatedCard) {
+    let role = document.getElementById("role");
+    let name = document.getElementById("name");
+    let profilePicture = document.getElementById("img-path");
+    let text = document.getElementById("text");
+
+    role.innerHTML = generatedCard.role;
+    name.innerHTML = generatedCard.name;
+    profilePicture.src = generatedCard.imgPath;
+    text.innerHTML = generatedCard.text;
+}
+
+function updateValues(generatedCard) {
 
 }
