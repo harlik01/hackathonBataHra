@@ -44,8 +44,7 @@
 
 
 #img-background {
-    background: rgb(156, 156, 156);
-    background: linear-gradient(105deg, rgba(45,0,0,1) 0%, rgba(0,0,0,1) 100%);
+    background: #5c6c76;
     border-radius: 10px;
     width: 350px;
     margin: 20px auto;
