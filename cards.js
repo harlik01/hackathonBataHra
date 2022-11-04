@@ -20,14 +20,3 @@ let gameCards = [
     new Card("imgs/zaklad.png", "Ámos", "Učitel", "Lidé jsou nespokojeni s poskytovaným vzdělaním. Navrhuji výstavbu školy práce.", [-10, 0, -25, -15], [20, -20, 25, 15], true, 4, 0)
 ];
 
-let rarityQuantity = [[], [], [], [], []];
-for(let i = 0; i < 5; i++) {
-    for(let x = 0; x < gameCards.length; x++) {
-        if(gameCards[x].rarity == (i + 1)) {
-            rarityQuantity[i].push(x);
-        }
-    }
-}
-
-// First card
-nextCard();
