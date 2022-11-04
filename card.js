@@ -1,5 +1,5 @@
 class Card {
-    constructor(imgPath, name, role, text, bgColor, optionNo, optionYes, rarity) {
+    constructor(imgPath, name, role, text, bgColor, optionNo, optionYes, rarity, pack) {
         this.imgPath = imgPath;
         this.name = name;
         this.role = role;
