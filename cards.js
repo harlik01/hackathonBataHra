@@ -1,0 +1,1 @@
+let card1 = new Card("imgs/example.png", "Mám manželku a 9 dětí, musím je živit. Potřebuji dostat přidáno.", "blue", [-15, 5, 0, 0], [20, -15, 0, 0]);
