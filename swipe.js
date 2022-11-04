@@ -18,9 +18,6 @@ window.mySwipe = new Swipe(document.getElementById('slider'), {
 
 function answered(index, elem) {
     console.log(index);
+    nextCard();
     window.mySwipe.slide(1, 250);
-}
-
-function nextCard() {
-    
 }
