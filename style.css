@@ -133,14 +133,14 @@
 
 .yes-container {
     height: 80vh;
-    background-color: rgb(1, 107, 1);
+    background-color: rgb(1, 151, 1);
     display: flex;
     align-items: center;
 }
 
 .no-container {
     height: 80vh;
-    background-color: rgb(186, 2, 2);
+    background-color: rgb(208, 5, 5);
     display: flex;
     align-items: center;
     justify-content: flex-end;
