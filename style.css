@@ -8,6 +8,64 @@
     user-select: none; /* Standard syntax */
 }
 
+/* icons */
+
+#icons {
+    height: 12vh;
+    width: 100%;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#icons img {
+    width: 50px;
+}
+
+#background-user {
+    height: 50px;
+    background-color: #ffffff;
+}
+
+#progress-user {
+    height: 20px; /* timhle menis mnozstvi "staminy" */
+    background-color: #717171;
+}
+
+#background-dollar {
+    height: 50px;
+    background-color: #ffffff;
+}
+
+#progress-dollar {
+    height: 40px; /* timhle menis mnozstvi "staminy" */
+    background-color: #717171;
+}
+
+#background-knowledge {
+    height: 50px;
+    background-color: #ffffff;
+}
+
+#progress-knowledge {
+    height: 30px; /* timhle menis mnozstvi "staminy" */
+    background-color: #717171;
+}
+
+#background-infrastructure {
+    height: 50px;
+    background-color: #ffffff;
+}
+
+#progress-infrastructure {
+    height: 40px; /* timhle menis mnozstvi "staminy" */
+    background-color: #717171;
+}
+
+/* cards */
+
 #card-container {
     width: 500px;
     height: 100vh;
@@ -15,20 +73,8 @@
     background-color: rgb(111, 111, 111);
     display: flex;
     flex-direction: column;
-}
+} 
 
-#icons {
-    height: 10vh;
-    padding: 7vh 0;
-    width: 100%;
-    background-color: rgb(36, 36, 36);
-    color: white;
-    text-align: center;
-}
-
-#icons i {
-    margin: 0 20px;
-}
 
 #card {
     height: 90vh;
