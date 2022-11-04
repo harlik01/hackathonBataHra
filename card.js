@@ -7,8 +7,8 @@ class Card {
         this.bgColor = bgColor;
         this.optionYes = optionYes;
         this.optionNo = optionNo;
-        this.rarity = rarity;
         this.unique = unique;
+        this.rarity = rarity;
         this.pack = pack;
     }
 }
@@ -44,6 +44,13 @@ function nextCard() {
     let randomCardIndex = Math.floor(Math.random() * rarityQuantity[numRarity - 1].length);
     let generatedCard = gameCards[rarityQuantity[numRarity - 1][randomCardIndex]];
     
+    // If past card = unique, delete card
+    console.log("Unikátnout: " + generatedCard.unique);
+    if(generatedCard.unique == true) {
+        gameCards.splice(gameCards[rarityQuantity[numRarity - 1][randomCardIndex]], 1);
+        console.log("Unikátní karta smazána!");
+    }
+
     console.log("randomCardIndex: " + randomCardIndex);
     console.log("generatedCard: " + generatedCard.text);
 
@@ -66,4 +73,7 @@ function setNewCard(generatedCard) {
 
 function updateValues(generatedCard) {
 
+}
+
+function animeChangedValue() { 
 }
