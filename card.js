@@ -67,7 +67,7 @@ function setNewCard(generatedCard) {
 
     role.innerHTML = generatedCard.role;
     name.innerHTML = generatedCard.name;
-    profilePicture.src = generatedCard.imgPath;
+    profilePicture.src = "imgs/" + generatedCard.name + ".png";
     text.innerHTML = generatedCard.text;
 }
 

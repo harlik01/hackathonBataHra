@@ -33,7 +33,7 @@ let gameCards = [
     new Card("imgs/example.png", "Milan", "Asistent", "Jeden z návrhů z poslední schůze bylo zavedení cen končící číslem 9. Výsledek ale není jistý.", [0, -20, 0, 0], [0, 25, 0, 0], true, 5, 1),
     new Card("imgs/example.png", "Alois Rašín", "Ministr financí", "Naše vláda navrhuje vyšší zdanění firem a nižší pro zaměstnance. Jste pro?", [-20, 10, 0, 0], [20, -20, 0, 0], true, 3, 2),
     new Card("imgs/example.png", "Josef Lada", "Malíř", "Měl byste zájem o mé malby?", [-10, 0, 10, 0], [10, -10, -5, 0], true, 1, 1),
-    new Card("imgs/example.png", "Jan Warich", "Herec a scénárista", "Chtěl bych uvést moji novou divadelní hru ve Zlíně. Máte zájem?", [-10, -10, 0, 0], [10, 15, 10, 0], false, 5, 2),
+    new Card("imgs/example.png", "Jan Werich", "Herec a scénárista", "Chtěl bych uvést moji novou divadelní hru ve Zlíně. Máte zájem?", [-10, -10, 0, 0], [10, 15, 10, 0], false, 5, 2),
     new Card("imgs/example.png", "Lída Baarová", "Herečka", "Chtěla bych natočit můj nový film ve Zlíně, ale potřebuji sponzory.", [-10, 10, 0, 0], [15, -10, 0, 0], true, 3, 2),
     new Card("imgs/example.png", "Joe", "Podnikatel", "Nabízím Vám stáž v mé New Yorské obuvnické společnosti. Získáté mnoho zkušeností, ale budu chtít malý úplatek.", [0, -10, -30, 0], [0, -10, 30, 0], true, 5, 0),
     new Card("imgs/example.png", "Franz", "Člen rakousko-uherské vlády ", "Potřebujeme vyrobit obuv pro naši armádu. Vaši zaměstnanci nebudou muset narukovat.", [-30, 10, -5, 5], [30, -20, 5, 5], true, 5, 2),
