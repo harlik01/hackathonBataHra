@@ -1,5 +1,5 @@
 class Card {
-    constructor(imgPath, name, role, text, bgColor, optionNo, optionYes, rarity, pack) {
+    constructor(imgPath, name, role, text, bgColor, optionNo, optionYes, rarity, unique, pack) {
         this.imgPath = imgPath;
         this.name = name;
         this.role = role;
@@ -8,6 +8,7 @@ class Card {
         this.optionYes = optionYes;
         this.optionNo = optionNo;
         this.rarity = rarity;
+        this.unique = unique;
         this.pack = pack;
     }
 }
@@ -15,6 +16,8 @@ class Card {
 let cards = [];
 let rarity = [1,2,3,4,5];
 let raritySum = rarity.reduce((partialSum, a) => partialSum + a, 0);
+let ranges = [];
+
 
 function nextCard() {
     let randomNum = Math.floor(Math.random() * raritySum) + 1;
