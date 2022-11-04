@@ -12,12 +12,13 @@ window.mySwipe = new Swipe(document.getElementById('slider'), {
     transitionEnd: function(index, elem) {
         // 0 - right (NO), 2 - left (YES), 1 - ignore
         answered(index, elem);
-        nextCard();
     }
   });
 
 function answered(index, elem) {
     console.log(index);
-    nextCard();
-    window.mySwipe.slide(1, 250);
+    if(index != 1) {
+        nextCard();
+        window.mySwipe.slide(1, 250);
+    }
 }
