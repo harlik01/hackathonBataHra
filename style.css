@@ -6,7 +6,7 @@
 }
 
 #card-container {
-    width: 45vw;
+    width: 500px;
     height: 100vh;
     margin: 0 auto;
     background-color: black;
@@ -15,17 +15,15 @@
 
 #card {
     width: 400px;
-    height: 70vh;
-    background-color: bisque;
-    margin: 0 auto;
-    top: 15vh;
+    height: fit-content;
+    background-color: rgb(220, 220, 220);
+    margin:  auto;
     
 }
 
 #img-path {
     width: 200px;
     margin: 50px 100px 20px 100px;
-    
 }
 
 #text {
