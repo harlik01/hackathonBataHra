@@ -1,0 +1,22 @@
+{
+  "name": "hackathonbatahra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harlik01/hackathonBataHra.git"
+  },
+  "author": "KAM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harlik01/hackathonBataHra/issues"
+  },
+  "homepage": "https://github.com/harlik01/hackathonBataHra#readme",
+  "dependencies": {
+    "swipejs": "^2.3.1"
+  }
+}
