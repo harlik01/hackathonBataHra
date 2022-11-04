@@ -10,14 +10,30 @@
     height: 100vh;
     margin: 0 auto;
     background-color: black;
+    display: flex;
+    flex-direction: column;
     
 }
 
+#icons {
+    padding: 40px;
+    width: 100%;
+    background-color: rgb(138, 138, 138);
+    color: white;
+    text-align: center;
+}
+
+#icons i {
+    margin: 0 20px;
+}
+
+
 #card {
     width: 400px;
-    height: fit-content;
+    height: 75vh;
     background-color: rgb(220, 220, 220);
-    margin:  auto;
+    margin: auto;
+    border-radius: 10px;
     
 }
 
