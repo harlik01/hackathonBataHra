@@ -43,11 +43,13 @@ function nextCard() {
 
     let randomCardIndex = Math.floor(Math.random() * rarityQuantity[numRarity - 1].length);
     let generatedCard = gameCards[rarityQuantity[numRarity - 1][randomCardIndex]];
+
+    console.log("index: " + rarityQuantity[numRarity - 1][randomCardIndex]);
     
     // If past card = unique, delete card
     console.log("Unikátnout: " + generatedCard.unique);
     if(generatedCard.unique == true) {
-        gameCards.splice(gameCards[rarityQuantity[numRarity - 1][randomCardIndex]], 1);
+        gameCards.splice(rarityQuantity[numRarity - 1][randomCardIndex], 1);
         console.log("Unikátní karta smazána!");
     }
 
