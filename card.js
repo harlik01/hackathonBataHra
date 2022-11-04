@@ -40,5 +40,6 @@ function nextCard() {
     console.log("Range:" + numRarity);
     // Generate card from range
     
+    
 
 }
