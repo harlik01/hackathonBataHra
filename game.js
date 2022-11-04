@@ -6,3 +6,5 @@ class Game {
         this.technology = 50;
     }
 }
+
+let game = new Game();
