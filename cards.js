@@ -12,7 +12,7 @@ let gameCards = [
     new Card("imgs/example.png", "František Gahura", "Architekt", "Dobrý den, mám pro Vás návrhy nového obchodního domu. Chcete jej vystavět?", "blue", [-10, 0, 0, -10], [10, -15, 0, 15], false, 2, 1),
     new Card("imgs/example.png", "František Gahura", "Architekt", "Zdravím, ve Zlíně chybí kino, mám hotový návrh, ale musíme zničit dva domky. ", "blue", [0, -10, -10, -5], [0, -15, 0, 10], true, 2, 4),
     new Card("imgs/example.png", "Jan Jánský", "Lékař", "Dobrý den, ve firmě Vám chybí lékař, měl bych zájem. ", [-10, 0, 0, 0], [10, -10, 0, 0], true, 5, 0),
-    new Card("imgs/example.png", "Jan Jánský", "Lékař", "Zdravím, chtěl bych ve Vaší nemocnici představit můj nový objev. ", [-10, 0, -10, 0], [10, 0, 10, 0], false, 5, 5),
+    new Card("imgs/example.png", "Jan Jánský", "Lékař", "Zdravím, chtěl bych ve Vaší nemocnici představit můj nový objev. ", [-10, 0, -10, 0], [10, 0, 10, 0], false, 3, 5),
     new Card("imgs/example.png", "Josef Ressel", "Vynálezce", "Zdravím, pane Baťo,  vytvořil jsem nový stroj, který nahradí některé zaměstnance. ", [0, -5, 0, -10], [-10, -10, 0, 10], false, 5, 3),
     new Card("imgs/example.png", "Josef Ressel", "Vynálezce", "Dobrý den, mám pro Vás návrh výstavby vodního kanálu. ", [-5, 0, 0, -10], [10, -10, 0, 10], true, 5, 2),
     new Card("imgs/example.png", "František Křižík", "Vynálezce", "Dobrý den, pane Baťo, navrhuji výstavbu osvětlení ve výrobě, ale osvětlovači přijdou o práci. ", [0, 0, 0, -10], [10, -10, 0, 10], true, 5, 0),
@@ -45,16 +45,16 @@ let gameCards = [
     new Card("imgs/example.png", "Josef", "Člen městské rady", "Město Vám nabízí pozemky na výstavbu budov. Máte zájem?", [-10, 10, 0, -20], [15, -15, 0, 20], false, 3, 0),
     new Card("imgs/example.png", "Honza", "Správce kina", "Kino potřebuje rekonstrukci", [-15, 10, -5, -10], [15, -20, 10, 10], false, 2, 1),
     new Card("imgs/example.png", "Emil", "Sportovní nadšenec", "Ve městě chybí sport. Založte fotbalový klub.", [-15, 10, 0, 0], [15, -20, 0, 5], true, 2, 1)
-    ];
+];
 
-    let rarityQuantity = [[], [], [], [], []];
-    for(let i = 0; i < 5; i++) {
-        for(let x = 0; x < gameCards.length; x++) {
-            if(gameCards[x].rarity == (i + 1)) {
-                rarityQuantity[i].push(x);
-            }
+let rarityQuantity = [[], [], [], [], []];
+for (let i = 0; i < 5; i++) {
+    for (let x = 0; x < gameCards.length; x++) {
+        if (gameCards[x].rarity == (i + 1)) {
+            rarityQuantity[i].push(x);
         }
     }
-    
-    // First card
-    nextCard();
+}
+
+// First card
+nextCard();
