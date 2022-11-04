@@ -36,7 +36,3 @@ let card18 = new Card("imgs/example.png", "František Křižík", "Vynálezce", 
 
 let card19 = new Card("imgs/example.png", "Ámos", "Učitel", "Lidé jsou nespokojeni s poskytovaným vzdělaním. Navrhuji výstavbu školy práce.", [-10, 0, -25, -15], [20, -20, 25, 15], true, 4, 0);
 
-let gameCards = [];
-for(let i = 1; i < 20; i++) {
-    gameCards.push(card + i);
-}
