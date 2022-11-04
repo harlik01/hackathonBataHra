@@ -1,5 +1,5 @@
 window.mySwipe = new Swipe(document.getElementById('slider'), {
-    startSlide: 0,
+    startSlide: 1,
     speed: 400,
     auto: 3000,
     draggable: true,
