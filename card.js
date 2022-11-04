@@ -48,7 +48,7 @@ function nextCard() {
     console.log("generatedCard: " + generatedCard.text);
 
     // Set next card
-    setNewCard(generatedCard)
+    setNewCard(generatedCard);
 
 }
 
@@ -60,9 +60,10 @@ function setNewCard(generatedCard) {
 
     role.innerHTML = generatedCard.role;
     name.innerHTML = generatedCard.name;
-    profilePicture.src = name;
+    profilePicture.src = generatedCard.imgPath;
     text.innerHTML = generatedCard.text;
 }
 
 function updateValues(generatedCard) {
+
 }
