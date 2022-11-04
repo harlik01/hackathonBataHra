@@ -46,8 +46,22 @@ let gameCards = [
     new Card("imgs/example.png", "Honza", "Správce kina", "Kino potřebuje rekonstrukci", [-15, 10, -5, -10], [15, -20, 10, 10], false, 2, 1),
     new Card("imgs/example.png", "Emil", "Sportovní nadšenec", "Ve městě chybí sport. Založte fotbalový klub.", [-15, 10, 0, 0], [15, -20, 0, 5], true, 2, 1),
 
+<<<<<<< HEAD
 
 
 
 
 ];
+=======
+let rarityQuantity = [[], [], [], [], []];
+for(let i = 0; i < 5; i++) {
+    for(let x = 0; x < gameCards.length; x++) {
+        if(gameCards[x].rarity == (i + 1)) {
+            rarityQuantity[i].push(x);
+        }
+    }
+}
+
+// First card
+nextCard();
+>>>>>>> 779edd1b70bb38ac745cc099398af61fbd6561dc
