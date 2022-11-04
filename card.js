@@ -67,3 +67,6 @@ function setNewCard(generatedCard) {
 function updateValues(generatedCard) {
 
 }
+
+function animeChangedValue() { 
+}
