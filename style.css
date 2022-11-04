@@ -9,14 +9,15 @@
     width: 500px;
     height: 100vh;
     margin: 0 auto;
-    background-color: rgb(88, 88, 88);
+    background-color: rgb(111, 111, 111);
     display: flex;
     flex-direction: column;
     
 }
 
 #icons {
-    padding: 40px;
+    height: 10vh;
+    padding: 7vh 0;
     width: 100%;
     background-color: rgb(36, 36, 36);
     color: white;
@@ -29,32 +30,58 @@
 
 
 #card {
+    height: 90vh;
     width: 400px;
-    height: 75vh;
-    background-color: rgb(164, 164, 164);
-    margin: auto;
-    border-radius: 10px;
+    background-color: rgb(201, 201, 201);
+    margin: 0 auto;
     
 }
 
+.character-info {
+    text-align: center;
+    margin: 20px 0 5px 0;
+}
+
+
 #img-background {
     background: rgb(156, 156, 156);
-background: linear-gradient(105deg, rgba(45,0,0,1) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(105deg, rgba(45,0,0,1) 0%, rgba(0,0,0,1) 100%);
     border-radius: 10px;
+    width: 350px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+
 }
 
 #img-path {
     width: 200px;
-    margin: 20px 100px;
-    
+    padding-top: 20px;
 }
 
 #text {
     text-align: center;
     font-family: monospace;
     font-size: 16px;
-    margin: 20px 10px;
+    padding: 30px 15px;
     display: inline-block;
+    height: 20vh;
+}
+
+.year-container {
+    display: flex;
+    width: 100%;  
+    height: 10vh;
+    background-color: rgb(36, 36, 36);
+    justify-content: center;
+    align-items: center;
+}
+
+#year {
+    font-family: monospace;
+    font-size: 30px;
+    color: white;
+    text-align: center;
 }
 
 /* sliderjs */
