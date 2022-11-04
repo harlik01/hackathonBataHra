@@ -1,8 +1,8 @@
 class Game {
     constructor() {
-        this.moralka = 50;
-        this.penize = 50;
-        this.vzdelavani = 50;
-        this.technologie = 50;
+        this.morality = 50;
+        this.money = 50;
+        this.education = 50;
+        this.technology = 50;
     }
 }
