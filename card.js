@@ -118,10 +118,35 @@ function updateValues(index, generatedCard, game) {
     let infrastructureValue = parseInt(document.getElementById("progress-infrastructure").offsetHeight + (answer[3] / 2));
 
 
-    document.getElementById("progress-user").style.height = parseInt(userValue) + "px";
-    document.getElementById("progress-dollar").style.height = parseInt(dollarValue) + "px";
-    document.getElementById("progress-knowledge").style.height = parseInt(progressValue) + "px";
-    document.getElementById("progress-infrastructure").style.height = parseInt(infrastructureValue) + "px";
+    anime({
+        targets: "#progress-user",
+        height: parseInt(userValue) + "px",
+        easing: "easeInSine"
+      });
+    anime({
+        targets: "#progress-dollar",
+        height: parseInt(dollarValue) + "px",
+        easing: "easeInSine"
+      });
+    anime({
+        targets: "#rogress-knowledge",
+        height: parseInt(progressValue) + "px",
+        easing: "easeInSine"
+      });
+    anime({
+        targets: "#progress-infrastructure",
+        height: parseInt(infrastructureValue) + "px",
+        easing: "easeInSine"
+      });
+
+      
+
+      
+
+    //document.getElementById("progress-user").style.height = parseInt(userValue) + "px";
+    //document.getElementById("progress-dollar").style.height = parseInt(dollarValue) + "px";
+    //document.getElementById("progress-knowledge").style.height = parseInt(progressValue) + "px";
+    //document.getElementById("progress-infrastructure").style.height = parseInt(infrastructureValue) + "px";
 
     console.log("vyska před: " + document.getElementById("progress-knowledge").style.height);
 
