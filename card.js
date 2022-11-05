@@ -104,17 +104,66 @@ function updateValues(index, generatedCard, game) {
     }
     else {
         for(let i = 0; i < generatedCard.optionYes.length; i++) {
-            answer.push(generatedCard.optionYes);
+            answer.push(generatedCard.optionYes[i]);
         }
     }
-    document.getElementById("progress-user").style.height += answer[0] / 2;
-    document.getElementById("progress-dollar").style.height += answer[1] / 2;
-    document.getElementById("progress-knowledge").style.height += answer[2] / 2;
-    document.getElementById("progress-infrastructure").style.height += answer[3] / 2;
+
+    console.log("answer:" + answer);
+
+    for(let i = 0; i < answer.length; i++) {
+        if(answer[i] < 0) {
+            answer[i] = Math.abs(answer[i]);
+        }
+        else {
+           answer[i] = -Math.abs(answer[i]);
+        }
+    }
+
+    let userValue = parseInt(document.getElementById("progress-user").offsetHeight + (answer[0] / 2));
+    let dollarValue = parseInt(document.getElementById("progress-dollar").offsetHeight + (answer[1] / 2));
+    let progressValue = parseInt(document.getElementById("progress-user").offsetHeight + (answer[2] / 2));
+    let infrastructureValue = parseInt(document.getElementById("progress-user").offsetHeight + (answer[3] / 2));
+
+    document.getElementById("progress-user").style.height = parseInt(userValue) + "px";
+    document.getElementById("progress-dollar").style.height = parseInt(dollarValue) + "px";
+    document.getElementById("progress-knowledge").style.height = parseInt(progressValue) + "px";
+    document.getElementById("progress-infrastructure").style.height = parseInt(infrastructureValue) + "px";
+
+    console.log("user: " + userValue);
+    controlOverflowAndEnd(userValue, dollarValue, progressValue, infrastructureValue);
 }
 
 function animeChangedValue(game) {
   
 
 
+}
+
+function controlOverflowAndEnd(userValue, dollarValue, progressValue, infrastructureValue) {
+    let max = 0;
+    let min = 50;
+    if(userValue < max) {
+        document.getElementById("progress-user").style.height = parseInt(max) + "px";
+    } else if(userValue > min) {
+        document.getElementById("progress-user").style.height = parseInt(min) + "px";
+        console.log("konec");
+    }
+    if(dollarValue < max) {
+        document.getElementById("progress-dollar").style.height = parseInt(max) + "px";
+    } else if(dollarValue > min) {
+        document.getElementById("progress-dollar").style.height = parseInt(min) + "px";
+        console.log("konec");
+    }
+    if(progressValue < max) {
+        document.getElementById("progress-knowledge").style.height = parseInt(max) + "px";
+    } else if(progressValue > min) {
+        document.getElementById("progress-knowledge").style.height = parseInt(min) + "px";
+        console.log("konec");
+    }
+    if(infrastructureValue < max) {
+        document.getElementById("progress-infrastructure").style.height = parseInt(max) + "px";
+    } else if(infrastructureValue > min) {
+        document.getElementById("progress-infrastructure").style.height = parseInt(min) + "px";
+        console.log("konec");
+    }
 }
