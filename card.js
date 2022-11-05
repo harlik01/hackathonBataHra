@@ -13,6 +13,19 @@ class Card {
     }
 }
 
+class LearningCards {
+    constructor(imgPath, name, role, text, bgColor, optionNo, optionYes, type) {
+        this.imgPath = imgPath;
+        this.name = name;
+        this.role = role;
+        this.text.text = text;
+        this.bgColor = bgColor;
+        this.optionNo = optionNo;
+        this.optionYes = optionYes;
+        this.type = type;
+    }
+}
+
 let cards = [];
 let rarity = [1,2,3,4,5];
 let raritySum = rarity.reduce((partialSum, a) => partialSum + a, 0) - 1;
@@ -43,11 +56,13 @@ function nextCard() {
 
     let randomCardIndex = Math.floor(Math.random() * rarityQuantity[numRarity - 1].length);
     let generatedCard = gameCards[rarityQuantity[numRarity - 1][randomCardIndex]];
+
+    console.log("index: " + rarityQuantity[numRarity - 1][randomCardIndex]);
     
     // If past card = unique, delete card
     console.log("Unikátnout: " + generatedCard.unique);
     if(generatedCard.unique == true) {
-        gameCards.splice(gameCards[rarityQuantity[numRarity - 1][randomCardIndex]], 1);
+        gameCards.splice(rarityQuantity[numRarity - 1][randomCardIndex], 1);
         console.log("Unikátní karta smazána!");
     }
 
@@ -75,5 +90,6 @@ function updateValues(generatedCard) {
 
 }
 
-function animeChangedValue() { 
+function animeChangedValue() {
+
 }
