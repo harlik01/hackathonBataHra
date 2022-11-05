@@ -1,16 +1,16 @@
 let gameCards = [
-    new Card("imgs/example.png", "Klement", "Zaměstnanec", "Mám manželku a 9 dětí, musím je živit. Potřebuji dostat přidáno.", "blue", [-15, 5, 0, 0], [20, -15, 0, 0], false, 4, 0),
-    new Card("imgs/example.png", "Klement", "Zaměstnanec", "Zvyšuje se inflace a stěží  vyjdu s penězi.", "blue", [-10, 0, 0, 0], [15, -10, 0, 0], false, 1, 1),
+    new Card("imgs/example.png", "Klement", "Zaměstnanec", "Mám manželku a 9 dětí, musím je živit. Potřebuji dostat přidáno.", "blue", [-15, 5, 0, 0], [20, -10, 0, 0], false, 4, 0),
+    new Card("imgs/example.png", "Klement", "Zaměstnanec", "Zvyšuje se inflace a stěží  vyjdu s penězi.", "blue", [-10, 0, 0, 0], [15, -5, 0, 0], false, 1, 1),
     new Card("imgs/example.png", "Klement", "Zaměstnanec", "Již tady nějakou dobu pracuji, nemohl bych dostat přidáno?", "blue", [-10, 0, 0, 0], [10, -10, 0, 0], false, 3, 3),
-    new Card("imgs/example.png", "Marie", "Zaměstnanec", "Ženy nemají stejné platové podmínky jako muži!", "blue", [-20, 5, 0, 0], [20, -15, 0, 0], false, 1, 0),
+    new Card("imgs/example.png", "Marie", "Zaměstnanec", "Ženy nemají stejné platové podmínky jako muži!", "blue", [-20, 5, 0, 0], [20, -10, 0, 0], false, 1, 0),
     new Card("imgs/example.png", "Marie", "Zaměstnanec", "Firma se rozrůstá, ale plat mám pořád stejný. Zvažuji výpověď.", "blue", [-10, 10, 0, 0], [10, -10, 0, 0], false, 3, 3),
-    new Card("imgs/example.png", "Marie", "Zaměstnanec", "Právě se mi narodilo dítě, mohu dostat placenou dovolenou?", "blue", [-20, 10, 0, 0], [20, -20, 0, 0], false, 2, 4),
+    new Card("imgs/example.png", "Marie", "Zaměstnanec", "Právě se mi narodilo dítě, mohu dostat placenou dovolenou?", "blue", [-20, 10, 0, 0], [20, -15, 0, 0], false, 2, 4),
     new Card("imgs/example.png", "Karel Schinzel", "Vynálezce", "Dobrý den, snažím se rozšířit barevnou fotografii a mám pro Vás nabídku. Můžu jimi vylepšit vaše instruktážní materiály pro zaměstnance.", "blue", [-10, 0, -10, 0], [10, -10, 20, 0], true, 1, 1),
-    new Card("imgs/example.png", "Otto Wichterle", "Vynálezce", "Zdravím, pane řediteli, můžu usnadnit práci Vašim zaměstnancům. Kontaktní čočky jim zpříjemní život. ", "blue", [-10, 0, -10, 0], [10, -10, 0, 0], true, 1, 3),
-    new Card("imgs/example.png", "František Gahura", "Architekt", "Dobrý den, zaměstnanci si stěžují na nedostupnou zdravotní péčí. Mám pro Vás plány nové nemocnice. ", "blue", [-20, 0, 0, -20], [25, -15, 0, 20], true, 1, 2),
+    new Card("imgs/example.png", "Otto Wichterle", "Vynálezce", "Zdravím, pane řediteli, můžu usnadnit práci Vašim zaměstnancům. Kontaktní čočky jim zpříjemní život. ", "blue", [-10, 0, -10, 0], [10, -5, 0, 0], true, 1, 3),
+    new Card("imgs/example.png", "František Gahura", "Architekt", "Dobrý den, zaměstnanci si stěžují na nedostupnou zdravotní péčí. Mám pro Vás plány nové nemocnice. ", "blue", [-20, 0, 0, -20], [25, -10, 0, 20], true, 1, 2),
     new Card("imgs/example.png", "František Gahura", "Architekt", "Zdravím, šéfe, rozšiřujete firmu a zaměstnaci nemají kde bydlet. Postavte jim nové domky.", "blue", [-20, -10, 0, -15], [15, -10, 0, 10], false, 3, 2),
-    new Card("imgs/example.png", "František Gahura", "Architekt", "Dobrý den, mám pro Vás návrhy nového obchodního domu. Chcete jej vystavět?", "blue", [-10, 0, 0, -10], [10, -15, 0, 15], false, 2, 1),
-    new Card("imgs/example.png", "František Gahura", "Architekt", "Zdravím, ve Zlíně chybí kino, mám hotový návrh, ale musíme zničit dva domky. ", "blue", [0, -10, -10, -5], [0, -15, 0, 10], true, 2, 4),
+    new Card("imgs/example.png", "František Gahura", "Architekt", "Dobrý den, mám pro Vás návrhy nového obchodního domu. Chcete jej vystavět?", "blue", [-10, 0, 0, -10], [10, -10, 0, 15], false, 2, 1),
+    new Card("imgs/example.png", "František Gahura", "Architekt", "Zdravím, ve Zlíně chybí kino, mám hotový návrh, ale musíme zničit dva domky. ", "blue", [0, -10, -10, -5], [0, -10, 0, 10], true, 2, 4),
     new Card("imgs/example.png", "Jan Jánský", "Lékař", "Dobrý den, ve firmě Vám chybí lékař, měl bych zájem. ", "blue", [-10, 0, 0, 0], [10, -10, 0, 0], true, 4, 0),
     new Card("imgs/example.png", "Jan Jánský", "Lékař", "Zdravím, chtěl bych ve Vaší nemocnici představit můj nový objev. ", "blue", [-10, 0, -10, 0], [10, 0, 10, 0], false, 3, 5),
     new Card("imgs/example.png", "Josef Ressel", "Vynálezce", "Zdravím, pane Baťo,  vytvořil jsem nový stroj, který nahradí některé zaměstnance. ", "blue", [0, -5, 0, -10], [-10, -10, 0, 10], false, 5, 3),
@@ -37,14 +37,14 @@ let gameCards = [
     new Card("imgs/example.png", "Lída Baarová", "Herečka", "Chtěla bych natočit můj nový film ve Zlíně, ale potřebuji sponzory.", "blue", [-10, 10, 0, 0], [15, -10, 0, 0], true, 3, 2),
     new Card("imgs/example.png", "Joe", "Podnikatel", "Nabízím Vám stáž v mé New Yorské obuvnické společnosti. Získáté mnoho zkušeností, ale budu chtít malý úplatek.", "blue", [0, -10, -30, 0], [0, -10, 30, 0], true, 5, 0),
     new Card("imgs/example.png", "Franz", "Člen rakousko-uherské vlády ", "Potřebujeme vyrobit obuv pro naši armádu. Vaši zaměstnanci nebudou muset narukovat.", "blue", [-30, 10, -5, 5], [30, -20, 5, 5], true, 5, 2),
-    new Card("imgs/example.png", "Henry Ford", "Podnikatel", "Myslím, že pásová výroby by zvýšila produkci, ale její začátek je velmi nákladný.", "blue", [-10, -5, 0, -10], [30, -20, 5, 5], true, 3, 0),
-    new Card("imgs/example.png", "Adam", "Vedoucí pracovník", "Zvyšme počet pracovních hodin na 12.", "blue", [15, -10, 0, 0], [-20, 10, -10, 10], false, 4, 0),
+    new Card("imgs/example.png", "Henry Ford", "Podnikatel", "Myslím, že pásová výroby by zvýšila produkci, ale její začátek je velmi nákladný.", "blue", [-10, 0, 0, -10], [30, -15, 5, 5], true, 3, 0),
+    new Card("imgs/example.png", "Adam", "Vedoucí pracovník", "Zvyšme počet pracovních hodin na 12.", "blue", [15, -10, 0, 0], [-20, 15, -10, 10], false, 4, 0),
     new Card("imgs/example.png", "Milena", "Lékařka", "V nemocnici máme zastaralé vybavení. Nakoupíte nové?", "blue", [-15, 10, -5, -10], [20, -10, 5, 10], false, 4, 0),
     new Card("imgs/example.png", "Josef", "Člen městské rady", "Firma by měla přispívat více peněz do městského rozpočtu.", "blue", [-10, 10, -10, -10], [10, -10, 5, 10], false, 5, 0),
     new Card("imgs/example.png", "Josef", "Člen městské rady", "Škola je příliš nákladná – zrušme ji.", "blue", [20, -10, 25, 10], [-25, 10, -35, 10], true, 3, 2),
     new Card("imgs/example.png", "Josef", "Člen městské rady", "Město Vám nabízí pozemky na výstavbu budov. Máte zájem?", "blue", [-10, 10, 0, -20], [15, -15, 0, 20], false, 3, 0),
-    new Card("imgs/example.png", "Honza", "Správce kina", "Kino potřebuje rekonstrukci", "blue", [-15, 10, -5, -10], [15, -20, 10, 10], false, 2, 1),
-    new Card("imgs/example.png", "Emil", "Sportovní nadšenec", "Ve městě chybí sport. Založte fotbalový klub.", "blue", [-15, 10, 0, 0], [15, -20, 0, 5], true, 2, 1)
+    new Card("imgs/example.png", "Honza", "Správce kina", "Kino potřebuje rekonstrukci", "blue", [-15, 10, -5, -10], [15, -10, 10, 10], false, 2, 1),
+    new Card("imgs/example.png", "Emil", "Sportovní nadšenec", "Ve městě chybí sport. Založte fotbalový klub.", "blue", [-15, 10, 0, 0], [15, -10, 0, 5], true, 2, 1)
 ];
 
 let rarityQuantity = [[], [], [], [], []];
