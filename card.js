@@ -134,7 +134,6 @@ function updateValues(index, generatedCard, game) {
 }
 
 function animeChangedValue(game) {
-  
 
 
 }
@@ -146,24 +145,28 @@ function controlOverflowAndEnd(userValue, dollarValue, progressValue, infrastruc
         document.getElementById("progress-user").style.height = parseInt(max) + "px";
     } else if(userValue > min) {
         document.getElementById("progress-user").style.height = parseInt(min) + "px";
-        console.log("konec");
+        document.getElementById("end-text").innerHTML = "Lidé byli s politikou firmy nespokojení a podnikli dělnické povstávní. Byl jsi nalezen mrtvý ve své pracovně s nožem v zádech.";
+        document.getElementById("end-container").style.visibility = "visible";
     }
     if(dollarValue < max) {
         document.getElementById("progress-dollar").style.height = parseInt(max) + "px";
     } else if(dollarValue > min) {
         document.getElementById("progress-dollar").style.height = parseInt(min) + "px";
-        console.log("konec");
+        document.getElementById("end-text").innerHTML = "Byli jste příliš štědří, vaší firmě došli finance.";
+        document.getElementById("end-container").style.visibility = "visible";
     }
     if(progressValue < max) {
         document.getElementById("progress-knowledge").style.height = parseInt(max) + "px";
     } else if(progressValue > min) {
         document.getElementById("progress-knowledge").style.height = parseInt(min) + "px";
-        console.log("konec");
+        document.getElementById("end-text").innerHTML = "Vaši dělníci nebyli dostatečně poučeni a jeden z dělníků se přiotrávil lepidlem. Vy jste za něj nesl odpovědnost, a proto jste skončil ve vězení.";
+        document.getElementById("end-container").style.visibility = "visible";
     }
     if(infrastructureValue < max) {
         document.getElementById("progress-infrastructure").style.height = parseInt(max) + "px";
     } else if(infrastructureValue > min) {
         document.getElementById("progress-infrastructure").style.height = parseInt(min) + "px";
-        console.log("konec");
+        document.getElementById("end-text").innerHTML = "Kvalita městské infrastruktury není konkurence schopná, a proto vás opustili klíčový investoři.";
+        document.getElementById("end-container").style.visibility = "visible";
     }
 }
