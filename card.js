@@ -26,13 +26,14 @@ class LearningCards {
     }
 }
 
+let generatedCard = null;
 let cards = [];
 let rarity = [1,2,3,4,5];
 let raritySum = rarity.reduce((partialSum, a) => partialSum + a, 0) - 1;
 let ranges = [[0], [1,2], [3,4,5], [6,7,8,9], [10,11,12,13,14]];
 
 
-function nextCard(index) {
+function nextCard() {
     // Get card category
     let randomNum = Math.floor(Math.random() * raritySum) + 1;
     let numRarity = null;
@@ -54,13 +55,16 @@ function nextCard(index) {
     console.log("random: " + randomNum);
     console.log("numRarity: " + numRarity);
 
+    // Update rarityQuantity
+    rarityQuantity = [[], [], [], [], []];
+    updateRarityQuantity();
+
     let randomCardIndex = Math.floor(Math.random() * rarityQuantity[numRarity - 1].length);
-    let generatedCard = gameCards[rarityQuantity[numRarity - 1][randomCardIndex]];
+    generatedCard = gameCards[rarityQuantity[numRarity - 1][randomCardIndex]];
 
     console.log("index: " + rarityQuantity[numRarity - 1][randomCardIndex]);
     
     // Animate values
-    nextCard(index, generatedCard);
     animeChangedValue(game);
 
     // If past card = unique, delete card
@@ -91,15 +95,26 @@ function setNewCard(generatedCard) {
     text.innerHTML = generatedCard.text;
 }
 
-function updateValues(generatedCard, game) {
-
+function updateValues(index, generatedCard, game) {
+    let answer = [];
+    if(index == 0) {
+        for(let i = 0; i < generatedCard.optionNo.length; i++) {
+            answer.push(generatedCard.optionNo[i]);
+        }
+    }
+    else {
+        for(let i = 0; i < generatedCard.optionYes.length; i++) {
+            answer.push(generatedCard.optionYes);
+        }
+    }
+    document.getElementById("progress-user").style.height += answer[0] / 2;
+    document.getElementById("progress-dollar").style.height += answer[1] / 2;
+    document.getElementById("progress-knowledge").style.height += answer[2] / 2;
+    document.getElementById("progress-infrastructure").style.height += answer[3] / 2;
 }
 
 function animeChangedValue(game) {
-  //  document.getElementById("progress-user").style.height += ;
-   // document.getElementById("progress-dollar").style.height += ;
-   // document.getElementById("progress-knowledge").style.height += ;
-   // document.getElementById("progress-infrastructure").style.height += ;
+  
 
 
 }

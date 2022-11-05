@@ -48,10 +48,14 @@ let gameCards = [
 ];
 
 let rarityQuantity = [[], [], [], [], []];
-for (let i = 0; i < 5; i++) {
-    for (let x = 0; x < gameCards.length; x++) {
-        if (gameCards[x].rarity == (i + 1)) {
-            rarityQuantity[i].push(x);
+updateRarityQuantity();
+
+function updateRarityQuantity() {
+    for (let i = 0; i < 5; i++) {
+        for (let x = 0; x < gameCards.length; x++) {
+            if (gameCards[x].rarity == (i + 1)) {
+                rarityQuantity[i].push(x);
+            }
         }
     }
 }
