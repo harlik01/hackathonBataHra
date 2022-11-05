@@ -13,8 +13,8 @@ class Card {
     }
 }
 
-class ShoeMakerCards {
-    constructor(imgPath, name, role, text, bgColor, optionNo, optionYes) {
+class LearningCards {
+    constructor(imgPath, name, role, text, bgColor, optionNo, optionYes, type) {
         this.imgPath = imgPath;
         this.name = name;
         this.role = role;
@@ -22,6 +22,7 @@ class ShoeMakerCards {
         this.bgColor = bgColor;
         this.optionNo = optionNo;
         this.optionYes = optionYes;
+        this.type = type;
     }
 }
 
