@@ -20,6 +20,9 @@ function answered(index, elem) {
     if(index != 1) {
         updateValues(index, generatedCard, game);
         nextCard();
-        window.mySwipe.slide(1, 250);
+        // Waiting for a new card
+        setTimeout(() => {
+            window.mySwipe.slide(1, 250);
+        }, 150);
     }
 }
