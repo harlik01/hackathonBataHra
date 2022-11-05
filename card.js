@@ -26,6 +26,7 @@ class LearningCards {
     }
 }
 
+let generatedCard = null;
 let cards = [];
 let rarity = [1,2,3,4,5];
 let raritySum = rarity.reduce((partialSum, a) => partialSum + a, 0) - 1;
@@ -54,11 +55,18 @@ function nextCard() {
     console.log("random: " + randomNum);
     console.log("numRarity: " + numRarity);
 
+    // Update rarityQuantity
+    rarityQuantity = [[], [], [], [], []];
+    updateRarityQuantity();
+
     let randomCardIndex = Math.floor(Math.random() * rarityQuantity[numRarity - 1].length);
-    let generatedCard = gameCards[rarityQuantity[numRarity - 1][randomCardIndex]];
+    generatedCard = gameCards[rarityQuantity[numRarity - 1][randomCardIndex]];
 
     console.log("index: " + rarityQuantity[numRarity - 1][randomCardIndex]);
     
+    // Animate values
+    animeChangedValue(game);
+
     // If past card = unique, delete card
     console.log("Unikátnout: " + generatedCard.unique);
     if(generatedCard.unique == true) {
@@ -68,6 +76,7 @@ function nextCard() {
 
     console.log("randomCardIndex: " + randomCardIndex);
     console.log("generatedCard: " + generatedCard.text);
+
 
     // Set next card
     setNewCard(generatedCard);
@@ -86,10 +95,26 @@ function setNewCard(generatedCard) {
     text.innerHTML = generatedCard.text;
 }
 
-function updateValues(generatedCard) {
-
+function updateValues(index, generatedCard, game) {
+    let answer = [];
+    if(index == 0) {
+        for(let i = 0; i < generatedCard.optionNo.length; i++) {
+            answer.push(generatedCard.optionNo[i]);
+        }
+    }
+    else {
+        for(let i = 0; i < generatedCard.optionYes.length; i++) {
+            answer.push(generatedCard.optionYes);
+        }
+    }
+    document.getElementById("progress-user").style.height += answer[0] / 2;
+    document.getElementById("progress-dollar").style.height += answer[1] / 2;
+    document.getElementById("progress-knowledge").style.height += answer[2] / 2;
+    document.getElementById("progress-infrastructure").style.height += answer[3] / 2;
 }
 
-function animeChangedValue() {
+function animeChangedValue(game) {
+  
+
 
 }

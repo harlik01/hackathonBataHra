@@ -38,7 +38,7 @@ body {
 }
 
 #progress-user {
-    height: 20px; /* timhle menis mnozstvi "staminy" */
+    height: 25px; /* timhle menis mnozstvi "staminy" */
     background-color: #717171;
 }
 
@@ -48,7 +48,7 @@ body {
 }
 
 #progress-dollar {
-    height: 40px; /* timhle menis mnozstvi "staminy" */
+    height: 25px; /* timhle menis mnozstvi "staminy" */
     background-color: #717171;
 }
 
@@ -58,7 +58,7 @@ body {
 }
 
 #progress-knowledge {
-    height: 30px; /* timhle menis mnozstvi "staminy" */
+    height: 25px; /* timhle menis mnozstvi "staminy" */
     background-color: #717171;
 }
 
@@ -68,7 +68,7 @@ body {
 }
 
 #progress-infrastructure {
-    height: 40px; /* timhle menis mnozstvi "staminy" */
+    height: 25px; /* timhle menis mnozstvi "staminy" */
     background-color: #717171;
 }
 
@@ -119,7 +119,6 @@ body {
     padding: 30px 15px;
     display: inline-block;
     height: 20vh;
-    width: 100%;
 }
 
 .year-container {
