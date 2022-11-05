@@ -114,20 +114,28 @@ function updateValues(index, generatedCard, game) {
         if(answer[i] < 0) {
             answer[i] = Math.abs(answer[i]);
         }
-        else {
+        else if(answer[i] > 0) {
            answer[i] = -Math.abs(answer[i]);
+        }
+        else {
+
         }
     }
 
+    console.log("vyska před: " + document.getElementById("progress-knowledge").style.height);
+
     let userValue = parseInt(document.getElementById("progress-user").offsetHeight + (answer[0] / 2));
     let dollarValue = parseInt(document.getElementById("progress-dollar").offsetHeight + (answer[1] / 2));
-    let progressValue = parseInt(document.getElementById("progress-user").offsetHeight + (answer[2] / 2));
-    let infrastructureValue = parseInt(document.getElementById("progress-user").offsetHeight + (answer[3] / 2));
+    let progressValue = parseInt(document.getElementById("progress-knowledge").offsetHeight + (answer[2] / 2));
+    let infrastructureValue = parseInt(document.getElementById("progress-infrastructure").offsetHeight + (answer[3] / 2));
+
 
     document.getElementById("progress-user").style.height = parseInt(userValue) + "px";
     document.getElementById("progress-dollar").style.height = parseInt(dollarValue) + "px";
     document.getElementById("progress-knowledge").style.height = parseInt(progressValue) + "px";
     document.getElementById("progress-infrastructure").style.height = parseInt(infrastructureValue) + "px";
+
+    console.log("vyska před: " + document.getElementById("progress-knowledge").style.height);
 
     console.log("user: " + userValue);
     controlOverflowAndEnd(userValue, dollarValue, progressValue, infrastructureValue);
