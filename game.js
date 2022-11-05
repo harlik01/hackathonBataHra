@@ -8,3 +8,7 @@ class Game {
 }
 
 let game = new Game();
+
+function startStory() {
+    document.getElementById("start-page").style.visibility = "hidden";
+}
