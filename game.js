@@ -4,6 +4,7 @@ class Game {
         this.money = 50;
         this.education = 50;
         this.technology = 50;
+        this.year = 1895;
     }
 }
 
