@@ -18,7 +18,7 @@ window.mySwipe = new Swipe(document.getElementById('slider'), {
 function answered(index, elem) {
     console.log(index);
     if(index != 1) {
-        updateValues(index);
+        updateValues(index, generatedCard, game);
         nextCard();
         window.mySwipe.slide(1, 250);
     }

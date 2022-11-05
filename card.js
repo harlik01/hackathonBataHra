@@ -26,6 +26,7 @@ class LearningCards {
     }
 }
 
+let generatedCard = null;
 let cards = [];
 let rarity = [1,2,3,4,5];
 let raritySum = rarity.reduce((partialSum, a) => partialSum + a, 0) - 1;
@@ -54,11 +55,18 @@ function nextCard() {
     console.log("random: " + randomNum);
     console.log("numRarity: " + numRarity);
 
+    // Update rarityQuantity
+    rarityQuantity = [[], [], [], [], []];
+    updateRarityQuantity();
+
     let randomCardIndex = Math.floor(Math.random() * rarityQuantity[numRarity - 1].length);
-    let generatedCard = gameCards[rarityQuantity[numRarity - 1][randomCardIndex]];
+    generatedCard = gameCards[rarityQuantity[numRarity - 1][randomCardIndex]];
 
     console.log("index: " + rarityQuantity[numRarity - 1][randomCardIndex]);
     
+    // Animate values
+    animeChangedValue(game);
+
     // If past card = unique, delete card
     console.log("Unikátnout: " + generatedCard.unique);
     if(generatedCard.unique == true) {
@@ -68,6 +76,7 @@ function nextCard() {
 
     console.log("randomCardIndex: " + randomCardIndex);
     console.log("generatedCard: " + generatedCard.text);
+
 
     // Set next card
     setNewCard(generatedCard);
@@ -86,10 +95,75 @@ function setNewCard(generatedCard) {
     text.innerHTML = generatedCard.text;
 }
 
-function updateValues(generatedCard) {
+function updateValues(index, generatedCard, game) {
+    let answer = [];
+    if(index == 0) {
+        for(let i = 0; i < generatedCard.optionNo.length; i++) {
+            answer.push(generatedCard.optionNo[i]);
+        }
+    }
+    else {
+        for(let i = 0; i < generatedCard.optionYes.length; i++) {
+            answer.push(generatedCard.optionYes[i]);
+        }
+    }
+
+    console.log("answer:" + answer);
+
+    for(let i = 0; i < answer.length; i++) {
+        if(answer[i] < 0) {
+            answer[i] = Math.abs(answer[i]);
+        }
+        else {
+           answer[i] = -Math.abs(answer[i]);
+        }
+    }
+
+    let userValue = parseInt(document.getElementById("progress-user").offsetHeight + (answer[0] / 2));
+    let dollarValue = parseInt(document.getElementById("progress-dollar").offsetHeight + (answer[1] / 2));
+    let progressValue = parseInt(document.getElementById("progress-user").offsetHeight + (answer[2] / 2));
+    let infrastructureValue = parseInt(document.getElementById("progress-user").offsetHeight + (answer[3] / 2));
+
+    document.getElementById("progress-user").style.height = parseInt(userValue) + "px";
+    document.getElementById("progress-dollar").style.height = parseInt(dollarValue) + "px";
+    document.getElementById("progress-knowledge").style.height = parseInt(progressValue) + "px";
+    document.getElementById("progress-infrastructure").style.height = parseInt(infrastructureValue) + "px";
+
+    console.log("user: " + userValue);
+    controlOverflowAndEnd(userValue, dollarValue, progressValue, infrastructureValue);
+}
+
+function animeChangedValue(game) {
+  
+
 
 }
 
-function animeChangedValue() {
-
+function controlOverflowAndEnd(userValue, dollarValue, progressValue, infrastructureValue) {
+    let max = 0;
+    let min = 50;
+    if(userValue < max) {
+        document.getElementById("progress-user").style.height = parseInt(max) + "px";
+    } else if(userValue > min) {
+        document.getElementById("progress-user").style.height = parseInt(min) + "px";
+        console.log("konec");
+    }
+    if(dollarValue < max) {
+        document.getElementById("progress-dollar").style.height = parseInt(max) + "px";
+    } else if(dollarValue > min) {
+        document.getElementById("progress-dollar").style.height = parseInt(min) + "px";
+        console.log("konec");
+    }
+    if(progressValue < max) {
+        document.getElementById("progress-knowledge").style.height = parseInt(max) + "px";
+    } else if(progressValue > min) {
+        document.getElementById("progress-knowledge").style.height = parseInt(min) + "px";
+        console.log("konec");
+    }
+    if(infrastructureValue < max) {
+        document.getElementById("progress-infrastructure").style.height = parseInt(max) + "px";
+    } else if(infrastructureValue > min) {
+        document.getElementById("progress-infrastructure").style.height = parseInt(min) + "px";
+        console.log("konec");
+    }
 }

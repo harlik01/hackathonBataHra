@@ -8,6 +8,14 @@
     user-select: none; /* Standard syntax */
 }
 
+body {
+    background-image: url('./imgs/industrial-background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 /* icons */
 
 #icons {
@@ -30,7 +38,7 @@
 }
 
 #progress-user {
-    height: 20px; /* timhle menis mnozstvi "staminy" */
+    height: 25px; /* timhle menis mnozstvi "staminy" */
     background-color: #717171;
 }
 
@@ -40,7 +48,7 @@
 }
 
 #progress-dollar {
-    height: 40px; /* timhle menis mnozstvi "staminy" */
+    height: 25px; /* timhle menis mnozstvi "staminy" */
     background-color: #717171;
 }
 
@@ -50,7 +58,7 @@
 }
 
 #progress-knowledge {
-    height: 30px; /* timhle menis mnozstvi "staminy" */
+    height: 25px; /* timhle menis mnozstvi "staminy" */
     background-color: #717171;
 }
 
@@ -60,7 +68,7 @@
 }
 
 #progress-infrastructure {
-    height: 40px; /* timhle menis mnozstvi "staminy" */
+    height: 25px; /* timhle menis mnozstvi "staminy" */
     background-color: #717171;
 }
 
@@ -111,7 +119,6 @@
     padding: 30px 15px;
     display: inline-block;
     height: 20vh;
-    width: 100%;
 }
 
 .year-container {
