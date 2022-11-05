@@ -54,9 +54,6 @@ function nextCard(index) {
     console.log("random: " + randomNum);
     console.log("numRarity: " + numRarity);
 
-    // Update rarityQuantity
-    updateRarityQuantity();
-
     let randomCardIndex = Math.floor(Math.random() * rarityQuantity[numRarity - 1].length);
     let generatedCard = gameCards[rarityQuantity[numRarity - 1][randomCardIndex]];
 
