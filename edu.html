@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edu.css">
+    <script src="https://kit.fontawesome.com/9ee5543575.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swipejs/2.3.1/swipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <div id="end-container">
+        <h1>Dokončil jsi zkoušku.</h1>
+        <a href="./index.html">Zkusit znovu</a>
+        <br><br>
+        <p id="end-text"></p>
+    </div>
+
+    <div id="card-container">
+        <div id="icons"></div>
+        <div id="slider" class="swipe">
+            <div class="swipe-wrap">
+                <div class="no-container"></div>
+                <div id="card">
+                    <div class="character-info">
+                        <h1 id="role">Rádce</h1>
+                        <p id="name">Milan Ipsum</p>
+                    </div>
+                    <div id="img-background">
+                        <img src="./imgs/Jan Werich.png" alt="" id="img-path">
+                    </div>
+                    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit at odio cumque vitae
+                        vel?
+                        Magnam, est accusantium? Minima maiores voluptatem aut consequuntur nam sapiente quia libero
+                        maxime, sit
+                        unde dolorum!</p>
+                </div>
+                <div class="yes-container"></div>
+            </div>
+        </div>
+        <div class="year-container"></div>
+    </div>
+
+    <script src="game.js"></script>
+    <script src="card.js"></script>
+    <script src="cards.js"></script>
+    <script src="swipe.js"></script>
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
