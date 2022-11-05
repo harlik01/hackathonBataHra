@@ -62,3 +62,5 @@ function updateRarityQuantity() {
 
 // First card
 nextCard();
+
+
