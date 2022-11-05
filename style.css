@@ -114,9 +114,10 @@ body {
 
 #text {
     text-align: center;
+    width: 100%;
     font-family: monospace;
-    font-size: 16px;
-    padding: 30px 15px;
+    font-size: 25px;
+    padding: 30px 20px;
     display: inline-block;
     height: 20vh;
 }
@@ -183,4 +184,38 @@ body {
     width: 100%;
     position: relative;
     overflow: hidden;
+  }
+
+  /* end */
+
+  #end-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 1;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    visibility: hidden;
+  }
+
+  #end-container h1 {
+    font-family: monospace;
+    font-size: 50px;
+    margin: 20px auto;
+  }
+
+  #end-container a {
+    color: black;
+    text-decoration: none;
+    padding: 12px;
+    background-color: white;
+    border: 1px solid white;
+  }
+  #end-container a:hover {
+    color: white;
+    background-color: transparent;
+    transition: .3s;
   }
