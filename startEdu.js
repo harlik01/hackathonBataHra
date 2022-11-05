@@ -31,7 +31,7 @@ let instuctors = [
     new LearningCards("", "Instruktor", "Obuvník", "Aby se šití hned neprochodilo, kůži z boku musíme naříznout a udělat drážku do které se schová šev", "blue", 0, 1, 1),
     new LearningCards("", "Instruktor", "Obuvník", "Konec šití je pod špičkou boty.", "blue", 1, 0, 1),
     new LearningCards("", "Instruktor", "IT pracovník", "Konstruktor se volá v každém cyklu", "blue", 1, 0, 2),
-    new LearningCards("", "Instruktor", "IT pracovník", "Node.js běží na straně serveru", 0, "blue", 1, 2),
+    new LearningCards("", "Instruktor", "IT pracovník", "Node.js běží na straně serveru", "blue", 0, 1, 2),
     new LearningCards("", "Instruktor", "IT pracovník", "Java je typově závislá", "blue", 0, 1, 2),
     new LearningCards("", "Instruktor", "IT pracovník", "Vývoj Java aplikací probíhá hlavně v sublime text", "blue", 1, 0, 2),
 
