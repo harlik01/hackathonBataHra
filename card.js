@@ -13,6 +13,18 @@ class Card {
     }
 }
 
+class ShoeMakerCards {
+    constructor(imgPath, name, role, text, bgColor, optionNo, optionYes) {
+        this.imgPath = imgPath;
+        this.name = name;
+        this.role = role;
+        this.text.text = text;
+        this.bgColor = bgColor;
+        this.optionNo = optionNo;
+        this.optionYes = optionYes;
+    }
+}
+
 let cards = [];
 let rarity = [1,2,3,4,5];
 let raritySum = rarity.reduce((partialSum, a) => partialSum + a, 0) - 1;
@@ -77,5 +89,6 @@ function updateValues(generatedCard) {
 
 }
 
-function animeChangedValue() { 
+function animeChangedValue() {
+
 }
