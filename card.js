@@ -63,9 +63,6 @@ function nextCard() {
     generatedCard = gameCards[rarityQuantity[numRarity - 1][randomCardIndex]];
 
     console.log("index: " + rarityQuantity[numRarity - 1][randomCardIndex]);
-    
-    // Animate values
-    animeChangedValue(game);
 
     // If past card = unique, delete card
     console.log("Unikátnout: " + generatedCard.unique);
@@ -80,6 +77,10 @@ function nextCard() {
 
     // Set next card
     setNewCard(generatedCard);
+
+    // Update year
+    game.year++;
+    document.getElementById("year").innerHTML = game.year;
 
 }
 
@@ -141,11 +142,6 @@ function updateValues(index, generatedCard, game) {
     controlOverflowAndEnd(userValue, dollarValue, progressValue, infrastructureValue);
 }
 
-function animeChangedValue(game) {
-
-
-}
-
 function controlOverflowAndEnd(userValue, dollarValue, progressValue, infrastructureValue) {
     let max = 0;
     let min = 50;
@@ -154,6 +150,7 @@ function controlOverflowAndEnd(userValue, dollarValue, progressValue, infrastruc
     } else if(userValue > min) {
         document.getElementById("progress-user").style.height = parseInt(min) + "px";
         document.getElementById("end-text").innerHTML = "Lidé byli s politikou firmy nespokojení a podnikli dělnické povstávní. Byl jsi nalezen mrtvý ve své pracovně s nožem v zádech.";
+        document.getElementById("end-h1").innerHTML += " v roce " + game.year + ".";
         document.getElementById("end-container").style.visibility = "visible";
     }
     if(dollarValue < max) {
@@ -161,6 +158,7 @@ function controlOverflowAndEnd(userValue, dollarValue, progressValue, infrastruc
     } else if(dollarValue > min) {
         document.getElementById("progress-dollar").style.height = parseInt(min) + "px";
         document.getElementById("end-text").innerHTML = "Byli jste příliš štědří, vaší firmě došli finance.";
+        document.getElementById("end-h1").innerHTML += " v roce " + game.year + ".";
         document.getElementById("end-container").style.visibility = "visible";
     }
     if(progressValue < max) {
@@ -168,6 +166,7 @@ function controlOverflowAndEnd(userValue, dollarValue, progressValue, infrastruc
     } else if(progressValue > min) {
         document.getElementById("progress-knowledge").style.height = parseInt(min) + "px";
         document.getElementById("end-text").innerHTML = "Vaši dělníci nebyli dostatečně poučeni a jeden z dělníků se přiotrávil lepidlem. Vy jste za něj nesl odpovědnost, a proto jste skončil ve vězení.";
+        document.getElementById("end-h1").innerHTML += " v roce " + game.year + ".";
         document.getElementById("end-container").style.visibility = "visible";
     }
     if(infrastructureValue < max) {
@@ -175,6 +174,7 @@ function controlOverflowAndEnd(userValue, dollarValue, progressValue, infrastruc
     } else if(infrastructureValue > min) {
         document.getElementById("progress-infrastructure").style.height = parseInt(min) + "px";
         document.getElementById("end-text").innerHTML = "Kvalita městské infrastruktury není konkurence schopná, a proto vás opustili klíčový investoři.";
+        document.getElementById("end-h1").innerHTML += " v roce " + game.year + ".";
         document.getElementById("end-container").style.visibility = "visible";
     }
 }
