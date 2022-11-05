@@ -13,19 +13,6 @@ class Card {
     }
 }
 
-class LearningCards {
-    constructor(imgPath, name, role, text, bgColor, optionNo, optionYes, type) {
-        this.imgPath = imgPath;
-        this.name = name;
-        this.role = role;
-        this.text.text = text;
-        this.bgColor = bgColor;
-        this.optionNo = optionNo;
-        this.optionYes = optionYes;
-        this.type = type;
-    }
-}
-
 let generatedCard = null;
 let cards = [];
 let rarity = [1,2,3,4,5];
