@@ -32,7 +32,7 @@ let raritySum = rarity.reduce((partialSum, a) => partialSum + a, 0) - 1;
 let ranges = [[0], [1,2], [3,4,5], [6,7,8,9], [10,11,12,13,14]];
 
 
-function nextCard() {
+function nextCard(index) {
     // Get card category
     let randomNum = Math.floor(Math.random() * raritySum) + 1;
     let numRarity = null;
@@ -62,6 +62,10 @@ function nextCard() {
 
     console.log("index: " + rarityQuantity[numRarity - 1][randomCardIndex]);
     
+    // Animate values
+    nextCard(index, generatedCard);
+    animeChangedValue(game);
+
     // If past card = unique, delete card
     console.log("Unikátnout: " + generatedCard.unique);
     if(generatedCard.unique == true) {
@@ -71,6 +75,7 @@ function nextCard() {
 
     console.log("randomCardIndex: " + randomCardIndex);
     console.log("generatedCard: " + generatedCard.text);
+
 
     // Set next card
     setNewCard(generatedCard);
@@ -89,10 +94,15 @@ function setNewCard(generatedCard) {
     text.innerHTML = generatedCard.text;
 }
 
-function updateValues(generatedCard) {
+function updateValues(generatedCard, game) {
 
 }
 
-function animeChangedValue() {
+function animeChangedValue(game) {
+  //  document.getElementById("progress-user").style.height += ;
+   // document.getElementById("progress-dollar").style.height += ;
+   // document.getElementById("progress-knowledge").style.height += ;
+   // document.getElementById("progress-infrastructure").style.height += ;
+
 
 }

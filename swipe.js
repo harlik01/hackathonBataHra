@@ -19,7 +19,7 @@ function answered(index, elem) {
     console.log(index);
     if(index != 1) {
         updateValues(index);
-        nextCard();
+        nextCard(index);
         window.mySwipe.slide(1, 250);
     }
 }

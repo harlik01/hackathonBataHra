@@ -38,7 +38,7 @@ let gameCards = [
     new Card("imgs/example.png", "Joe", "Podnikatel", "Nabízím Vám stáž v mé New Yorské obuvnické společnosti. Získáté mnoho zkušeností, ale budu chtít malý úplatek.", "blue", [0, -10, -30, 0], [0, -10, 30, 0], true, 5, 0),
     new Card("imgs/example.png", "Franz", "Člen rakousko-uherské vlády ", "Potřebujeme vyrobit obuv pro naši armádu. Vaši zaměstnanci nebudou muset narukovat.", "blue", [-30, 10, -5, 5], [30, -20, 5, 5], true, 5, 2),
     new Card("imgs/example.png", "Henry Ford", "Podnikatel", "Myslím, že pásová výroby by zvýšila produkci, ale její začátek je velmi nákladný.", "blue", [-10, -5, 0, -10], [30, -20, 5, 5], true, 3, 0),
-    new Card("imgs/example.png", "Karel", "Vedoucí pracovník", "Zvyšme počet pracovních hodin na 12.", "blue", [15, -10, 0, 0], [-20, 10, -10, 10], false, 4, 0),
+    new Card("imgs/example.png", "Adam", "Vedoucí pracovník", "Zvyšme počet pracovních hodin na 12.", "blue", [15, -10, 0, 0], [-20, 10, -10, 10], false, 4, 0),
     new Card("imgs/example.png", "Milena", "Lékařka", "V nemocnici máme zastaralé vybavení. Nakoupíte nové?", "blue", [-15, 10, -5, -10], [20, -10, 5, 10], false, 4, 0),
     new Card("imgs/example.png", "Josef", "Člen městské rady", "Firma by měla přispívat více peněz do městského rozpočtu.", "blue", [-10, 10, -10, -10], [10, -10, 5, 10], false, 5, 0),
     new Card("imgs/example.png", "Josef", "Člen městské rady", "Škola je příliš nákladná – zrušme ji.", "blue", [20, -10, 25, 10], [-25, 10, -35, 10], true, 3, 2),
