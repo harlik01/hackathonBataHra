@@ -23,9 +23,9 @@ window.mySwipe = new Swipe(document.getElementById('slider'), {
         } else if(index == 2) {
             score += instuctors[counter].optionYes;
         }
-        counter++;
-        setNewCard(counter);
+        setNewCard(numberOfPack, counter);
         window.mySwipe.slide(1, 250);
         console.log("score:" + score);
+        counter++;
     }
 }

@@ -36,7 +36,7 @@ function updateTypeQuantity() {
     for (let i = 0; i < 3; i++) {
         for (let x = 0; x < instuctors.length; x++) {
             if (instuctors[x].type == (i)) {
-                typeQuantity[i].push(instuctors[x]);
+                typeQuantity[i].push(x);
             }
         }
     }
