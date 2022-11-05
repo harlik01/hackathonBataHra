@@ -256,26 +256,10 @@ body {
     text-decoration: underline;
 }
 .div2 { 
-    grid-area: 1 / 2 / 2 / 3; 
+    grid-area: 1 / 2 / 4 / 2; 
     background-color: #bebebe;
     color: #000;
 }
 .div2:hover h1 {
-    text-decoration: underline;
-}
-.div3 { 
-    grid-area: 2 / 2 / 3 / 3; 
-    background-color: #949494;
-    color: #000;
-}
-.div3:hover h1 {
-    text-decoration: underline;
-}
-.div4 { 
-    grid-area: 3 / 2 / 4 / 3; 
-    background-color: #535353;
-    color: #000;
-}
-.div4:hover h1 {
     text-decoration: underline;
 }
