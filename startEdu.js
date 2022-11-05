@@ -11,6 +11,14 @@ class LearningCards {
     }
 }
 
+class Edu {
+    constructor(numberOfPack) {
+        this.numberOfPack = numberOfPack;
+        this.counter = 0;
+        this.score = 0;
+    }
+}
+
 let instuctors = [
     new LearningCards("", "Instruktor", "Manažer", "Visual Studio je aplikace pro správu týmu.", "blue", 1, 0, 0),
     new LearningCards("", "Instruktor", "Manažer", "Konkurenční firma nám zkopírovala design. Mělo by se to řešit?", "blue", 0, 1, 0),
@@ -21,7 +29,7 @@ let instuctors = [
     new LearningCards("", "Instruktor", "Obuvník", "Kopyto se vytvoří dříve než šablona", "blue", 0, 1, 1),
     new LearningCards("", "Instruktor", "Obuvník", "Na podšívku i svršek se využívá jeden střih.", "blue", 1, 0, 1),
     new LearningCards("", "Instruktor", "Obuvník", "Aby se šití hned neprochodilo, kůži z boku musíme naříznout a udělat drážku do které se schová šev", "blue", 0, 1, 1),
-    new LearningCards("", "Instruktor", "Obuvník", "Konec šití je pod špičkou boty.", "blue", 0, 1, 1),
+    new LearningCards("", "Instruktor", "Obuvník", "Konec šití je pod špičkou boty.", "blue", 1, 0, 1),
     new LearningCards("", "Instruktor", "IT pracovník", "Konstruktor se volá v každém cyklu", "blue", 1, 0, 2),
     new LearningCards("", "Instruktor", "IT pracovník", "Node.js běží na straně serveru", 0, "blue", 1, 2),
     new LearningCards("", "Instruktor", "IT pracovník", "Java je typově závislá", "blue", 0, 1, 2),
@@ -33,26 +41,22 @@ let typeQuantity = [[], [], []];
 updateTypeQuantity();
 
 function updateTypeQuantity() {
+    typeQuantity = [[], [], []];
     for (let i = 0; i < 3; i++) {
         for (let x = 0; x < instuctors.length; x++) {
             if (instuctors[x].type == (i)) {
-                typeQuantity[i].push(x);
+                typeQuantity[i].push(instuctors[x]);
             }
         }
     }
 }
 
+var edu;
 
-let numberOfPack = 0;
-let counter = 0;
-let score = 0;
-counter++;
-
-function startEdu(counter, numberOfPack) {
-    this.numberOfPack = numberOfPack;
-    console.log(numberOfPack);
+function startEdu(numberOfPack) {
+    edu = new Edu(numberOfPack);
     document.getElementById("start-page").style.visibility = "hidden";
-    setNewCard(numberOfPack, counter);
+    setNewCard(edu.numberOfPack, edu.counter);
 }
 
 
@@ -60,18 +64,13 @@ function setNewCard(numberOfPack, counter) {
     console.log("counter: " + counter);
     console.log("delka:" + typeQuantity[numberOfPack].length);
     console.log("type " + typeQuantity[numberOfPack]);
-    if((counter - 1) > (parseInt(typeQuantity[numberOfPack].length))) {
-        document.getElementById("end-text").style.innerHTML = "Dosáhl jsi " + score + " bodů z " + instuctors[numberOfPack][counter].length;
+    if((counter) == (typeQuantity[numberOfPack].length)) {
+        document.getElementById("end-text").innerHTML = "Dosáhl jsi " + edu.score + " bodů z " + typeQuantity[edu.numberOfPack].length;
         document.getElementById("end-container").style.visibility = "visible";
     } else {
-        let role = document.getElementById("role");
-        let name = document.getElementById("name");
-        let profilePicture = document.getElementById("img-path");
-        let text = document.getElementById("text");
-
-        role.innerHTML = typeQuantity[numberOfPack][counter - 1].role;
-        name.innerHTML = typeQuantity[numberOfPack][counter - 1].name;
-        profilePicture.src = "imgs/" + typeQuantity[numberOfPack][counter - 1].name + ".png";
-        text.innerHTML = typeQuantity[numberOfPack][counter - 1].text;
+        document.getElementById("role").innerHTML = typeQuantity[numberOfPack][counter].role;
+        document.getElementById("name").innerHTML = typeQuantity[numberOfPack][counter].name;
+        document.getElementById("img-path").src = "imgs/" + typeQuantity[numberOfPack][counter].name + ".png";
+        document.getElementById("text").innerHTML = typeQuantity[numberOfPack][counter].text;
     }
 }

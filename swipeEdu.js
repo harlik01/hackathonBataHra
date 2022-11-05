@@ -19,13 +19,13 @@ window.mySwipe = new Swipe(document.getElementById('slider'), {
     console.log(index);
     if(index != 1) {
         if(index == 0) {
-            score += instuctors[counter].optionNo;
+            edu.score += typeQuantity[edu.numberOfPack][edu.counter].optionNo;
         } else if(index == 2) {
-            score += instuctors[counter].optionYes;
+            edu.score += typeQuantity[edu.numberOfPack][edu.counter].optionYes;
         }
-        setNewCard(numberOfPack, counter);
+        edu.counter++;
+        setNewCard(edu.numberOfPack, edu.counter);
         window.mySwipe.slide(1, 250);
-        console.log("score:" + score);
-        counter++;
+        console.log("score: " + edu.score);
     }
 }
