@@ -129,7 +129,7 @@ function updateValues(index, generatedCard, game) {
         easing: "easeInSine"
       });
     anime({
-        targets: "#rogress-knowledge",
+        targets: "#progress-knowledge",
         height: parseInt(progressValue) + "px",
         easing: "easeInSine"
       });
