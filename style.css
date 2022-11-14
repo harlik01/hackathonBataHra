@@ -19,7 +19,26 @@ body {
     background-size: cover;
 }
 
-/* icons */
+/* sliderjs ------------------------------------------------------------------------------- */
+
+.swipe {
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+    width: 40vw;
+  }
+  .swipe-wrap {
+    overflow: hidden;
+    position: relative;
+  }
+  .swipe-wrap > div {
+    float: left;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+/* icons ------------------------------------------------------------------------------------ */
 
 #icons {
     height: 12vh;
@@ -75,10 +94,10 @@ body {
     background-color: #717171;
 }
 
-/* cards */
+/* cards ------------------------------------------------------------------------------- */
 
 #card-container {
-    width: 500px;
+    width: 40vw;
     height: 100vh;
     margin: 0 auto;
     background-color: rgb(111, 111, 111);
@@ -88,8 +107,8 @@ body {
 
 
 #card {
+    width: 100%;
     height: 90vh;
-    width: 400px;
     background-color: rgb(201, 201, 201);
     margin: 0 auto;
     
@@ -104,26 +123,29 @@ body {
 #img-background {
     background: #5c6c76;
     border-radius: 10px;
-    width: 350px;
-    margin: 20px auto;
+    width: 80%;
+    height: 30vh;
+    margin: 25px auto;
     display: flex;
     justify-content: center;
 }
 
 #img-path {
-    width: 200px;
-    padding-top: 20px;
+    width: fit-content;
+    padding-top: 30px;
 }
 
 #text {
     text-align: center;
     width: 100%;
     font-family: monospace;
-    font-size: 25px;
-    padding: 30px 20px;
+    font-size: 20px;
+    padding: 25px 40px;
     display: inline-block;
     height: 20vh;
 }
+
+/* year ----------------------------------------------------------------------------------- */
 
 .year-container {
     display: flex;
@@ -141,21 +163,16 @@ body {
     text-align: center;
 }
 
-/* answers */
+/* answers --------------------------------------------------------------------------- */
 
 .yes-container {
     height: 80vh;
     background-color: rgb(1, 151, 1);
-    display: flex;
-    align-items: center;
 }
 
 .no-container {
     height: 80vh;
     background-color: rgb(208, 5, 5);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
 }
 
 #yes {
@@ -171,25 +188,7 @@ body {
     margin: 55% 20px;
 }
 
-/* sliderjs */
-
-.swipe {
-    overflow: hidden;
-    visibility: hidden;
-    position: relative;
-  }
-  .swipe-wrap {
-    overflow: hidden;
-    position: relative;
-  }
-  .swipe-wrap > div {
-    float: left;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* end */
+  /* end ------------------------------------------------------------------------------------------- */
 
   #end-container {
     position: absolute;
@@ -223,7 +222,7 @@ body {
     transition: .3s;
   }
 
-  /* start */
+  /* start ---------------------------------------------------------------------------------------- */
 
   #start-page {
     position: absolute;
@@ -263,7 +262,17 @@ body {
     text-decoration: underline;
 }
 
-/* responsivity */
+/* responsivity ------------------------------------------------------------------------------------- */
+
+@media only screen and (min-width: 1500){
+    .swipe {
+        width: 30vw;
+    }
+
+    #card-container {
+        width: 30vw;
+    }
+}
 
 @media only screen and (max-width: 500px){
     #start-page h1 {
