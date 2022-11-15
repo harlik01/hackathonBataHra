@@ -25,7 +25,7 @@ body {
     overflow: hidden;
     visibility: hidden;
     position: relative;
-    width: 40vw;
+    width: 30vw;
   }
   .swipe-wrap {
     overflow: hidden;
@@ -97,7 +97,7 @@ body {
 /* cards ------------------------------------------------------------------------------- */
 
 #card-container {
-    width: 40vw;
+    width: 30vw;
     height: 100vh;
     margin: 0 auto;
     background-color: rgb(111, 111, 111);
@@ -166,12 +166,12 @@ body {
 /* answers --------------------------------------------------------------------------- */
 
 .yes-container {
-    height: 80vh;
+    height: 90vh;
     background-color: rgb(1, 151, 1);
 }
 
 .no-container {
-    height: 80vh;
+    height: 90vh;
     background-color: rgb(208, 5, 5);
 }
 
@@ -264,22 +264,75 @@ body {
 
 /* responsivity ------------------------------------------------------------------------------------- */
 
-@media only screen and (min-width: 1500){
+@media screen and (max-width: 992px) {
+        .swipe {
+            width: 45vw;
+        }
+    
+        #card-container {
+            width: 45vw;
+        }
+}
+
+@media screen and (max-width: 692px) {
     .swipe {
-        width: 30vw;
+        width: 70vw;
     }
 
     #card-container {
-        width: 30vw;
+        width: 70vw;
     }
+
+    #end-container h1 {
+        text-align: center;
+        margin: 50px;
+    }
+
 }
 
-@media only screen and (max-width: 500px){
-    #start-page h1 {
-        font-size: 20px;
+@media screen and (max-width: 430px) {
+    .swipe {
+        width: 100vw;
+        margin: 0;
     }
 
-    #card {
-        width: 100%;
+    #card-container {
+        width: 100vw;
+        margin: 0;
     }
+
+    /* start ----------------------- */
+
+    #start-page {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .div1 {
+        width: 100vw;
+        height: 50vh;
+    }
+
+    #start-page h1 {
+        font-size: 30px;
+    }
+
+    .div2 {
+        width: 100vw;
+        height: 50vh;
+    }
+
+    /* end ---------------------- */
+
+    #end-container h1 {
+        font-size: 30px;
+        text-align: center;
+        margin: 20px;
+    }
+
+    #end-text {
+
+    }
+
 }
