@@ -192,7 +192,7 @@ body {
   #end-container {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 105vh;
     background-color: #000;
     z-index: 1;
     color: white;
@@ -271,6 +271,12 @@ body {
         #card-container {
             width: 45vw;
         }
+
+        #end-text {
+            display: inline-block;
+            text-align: center;
+            margin: 20px 10%;
+        }
 }
 
 @media screen and (max-width: 692px) {
@@ -328,10 +334,6 @@ body {
         font-size: 30px;
         text-align: center;
         margin: 20px;
-    }
-
-    #end-text {
-
     }
 
 }
