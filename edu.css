@@ -26,9 +26,9 @@ body {
     background-color: #000;
     z-index: 1;
     width: 100%;
-    height: 100%;
+    height: 105vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -61,7 +61,27 @@ body {
     color: #000;
 }
 
-/* icons */
+
+/* sliderjs ------------------------------------------------------------------------------- */
+
+.swipe {
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+    width: 30vw;
+  }
+  .swipe-wrap {
+    overflow: hidden;
+    position: relative;
+  }
+  .swipe-wrap > div {
+    float: left;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+/* icons ------------------------------------------------------------------------------------ */
 
 #icons {
     height: 12vh;
@@ -73,10 +93,54 @@ body {
     gap: 30px;
 }
 
-/* cards */
+#icons img {
+    width: 50px;
+}
+
+#background-user {
+    height: 50px;
+    background-color: #ffffff;
+}
+
+#progress-user {
+    height: 25px; /* timhle menis mnozstvi "staminy" */
+    background-color: #717171;
+}
+
+#background-dollar {
+    height: 50px;
+    background-color: #ffffff;
+}
+
+#progress-dollar {
+    height: 25px; /* timhle menis mnozstvi "staminy" */
+    background-color: #717171;
+}
+
+#background-knowledge {
+    height: 50px;
+    background-color: #ffffff;
+}
+
+#progress-knowledge {
+    height: 25px; /* timhle menis mnozstvi "staminy" */
+    background-color: #717171;
+}
+
+#background-infrastructure {
+    height: 50px;
+    background-color: #ffffff;
+}
+
+#progress-infrastructure {
+    height: 25px; /* timhle menis mnozstvi "staminy" */
+    background-color: #717171;
+}
+
+/* cards ------------------------------------------------------------------------------- */
 
 #card-container {
-    width: 500px;
+    width: 30vw;
     height: 100vh;
     margin: 0 auto;
     background-color: rgb(111, 111, 111);
@@ -84,11 +148,13 @@ body {
     flex-direction: column;
 } 
 
+
 #card {
+    width: 100%;
     height: 90vh;
-    width: 400px;
     background-color: rgb(201, 201, 201);
     margin: 0 auto;
+    
 }
 
 .character-info {
@@ -96,31 +162,32 @@ body {
     margin: 20px 0 5px 0;
 }
 
+
 #img-background {
     background: #5c6c76;
     border-radius: 10px;
-    width: 350px;
-    margin: 20px auto;
+    width: 80%;
+    height: 30vh;
+    margin: 25px auto;
     display: flex;
     justify-content: center;
 }
 
 #img-path {
-    width: 200px;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 #text {
     text-align: center;
     width: 100%;
     font-family: monospace;
-    font-size: 25px;
-    padding: 30px 20px;
+    font-size: 20px;
+    padding: 25px 40px;
     display: inline-block;
     height: 20vh;
 }
 
-/* year */
+/* year ----------------------------------------------------------------------------------- */
 
 .year-container {
     display: flex;
@@ -131,21 +198,23 @@ body {
     align-items: center;
 }
 
-/* answers */
+#year {
+    font-family: monospace;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+/* answers --------------------------------------------------------------------------- */
 
 .yes-container {
-    height: 80vh;
+    height: 90vh;
     background-color: rgb(1, 151, 1);
-    display: flex;
-    align-items: center;
 }
 
 .no-container {
-    height: 80vh;
+    height: 90vh;
     background-color: rgb(208, 5, 5);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
 }
 
 #yes {
@@ -161,30 +230,12 @@ body {
     margin: 55% 20px;
 }
 
-/* sliderjs */
-
-.swipe {
-    overflow: hidden;
-    visibility: hidden;
-    position: relative;
-  }
-  .swipe-wrap {
-    overflow: hidden;
-    position: relative;
-  }
-  .swipe-wrap > div {
-    float: left;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-
-  /* end */
+  /* end ------------------------------------------------------------------------------------------- */
 
   #end-container {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 105vh;
     background-color: #000;
     z-index: 1;
     color: white;
@@ -211,4 +262,98 @@ body {
     color: white;
     background-color: transparent;
     transition: .3s;
-  } 
+  }
+
+/* responsivity ------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 992px) {
+        .swipe {
+            width: 45vw;
+        }
+    
+        #card-container {
+            width: 45vw;
+        }
+
+        #end-text {
+            display: inline-block;
+            text-align: center;
+            margin: 20px 10%;
+        }
+
+        #start-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #start-page a {
+            height: 33%;
+            width: 100%;
+            text-align: center;
+        }
+}
+
+@media screen and (max-width: 692px) {
+    .swipe {
+        width: 70vw;
+    }
+
+    #card-container {
+        width: 70vw;
+    }
+
+    #end-container h1 {
+        text-align: center;
+        margin: 50px;
+    }
+
+    #start-page  h1 {
+        font-size: 30px;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .swipe {
+        width: 100vw;
+        margin: 0;
+    }
+
+    #card-container {
+        width: 100vw;
+        margin: 0;
+    }
+
+    /* start ----------------------- */
+
+    #start-page {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .div1 {
+        width: 100vw;
+        height: 50vh;
+    }
+
+    #start-page h1 {
+        font-size: 30px;
+    }
+
+    .div2 {
+        width: 100vw;
+        height: 50vh;
+    }
+
+    /* end ---------------------- */
+
+    #end-container h1 {
+        font-size: 30px;
+        text-align: center;
+        margin: 20px;
+    }
+
+}
