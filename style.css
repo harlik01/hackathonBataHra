@@ -9,15 +9,14 @@
     -webkit-user-drag: none;
     user-zoom: none;
     -webkit-touch-callout: none;
+
 }
 
-body {
-    background-image: url('./imgs/industrial-background.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+#body {
+    background: linear-gradient(rgba(0, 0, 0, 0.40), rgba(0, 0, 0, 0.40)),url('./imgs/industrial-background.png') no-repeat fixed center;
     background-size: cover;
     overflow: hidden;
+
 }
 
 /* sliderjs ------------------------------------------------------------------------------- */
@@ -224,6 +223,7 @@ body {
 
   /* start ---------------------------------------------------------------------------------------- */
 
+/* 
   #start-page {
     position: absolute;
     z-index: 1;
@@ -260,6 +260,64 @@ body {
 }
 .div2:hover h1 {
     text-decoration: underline;
+}
+*/
+
+.card-container--start {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 40vw;
+    margin: 0 30vw;
+    background-color: rgb(78, 78, 78);
+    display: flex;
+    flex-direction: column;
+
+} 
+
+.header {
+    height: 15vh;
+    padding: 30px 0;
+    width: 100%;
+    border: none;
+    font-size: 60px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #c7c7c7;
+    background-color: #000000;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.option {
+    background-color: rgb(112, 112, 112);
+    width: 100%;
+    height: max-content;
+    height: 33.4%;
+    text-decoration: none;
+    color: #000;
+}
+.option:hover {
+    text-decoration: underline;
+}
+
+.option:first-of-type {
+    background-color: #3b3b3b;
+}
+.option:last-of-type {
+    background-color: #cecece;
+}
+
+.option h1 {
+    font-family: monospace;
+    font-size: 50px;
+    margin: 20px auto;
+    text-align: center;
 }
 
 /* responsivity ------------------------------------------------------------------------------------- */

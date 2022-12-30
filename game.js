@@ -12,4 +12,6 @@ let game = new Game();
 
 function startStory() {
     document.getElementById("start-page").style.visibility = "hidden";
+    document.getElementById('body').style.background = "transparent url('./imgs/industrial-background.png') no-repeat fixed center";
+    document.getElementById('body').style.backgroundSize = "cover";
 }

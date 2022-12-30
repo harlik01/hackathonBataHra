@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    -webkit-user-drag: none;
+    user-zoom: none;
+    -webkit-touch-callout: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: center;
+}
+
+.container section {
+    width: 33.3%;
+}
+
+.header {
+    font-family: monospace;
+    font-size: 45px;
+    text-align: center;
+    padding: 60px 0 10px 0;
+}
+
+.text {
+    font-size: 18px;
+    padding: 0 35px;
+    text-align: center;
+}
+
+.link {
+    color: #f3f3f3;
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin: 20px 0 0 20px;
+    background-color: #000;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid black;
+}
+.link:hover {
+    background-color: transparent;
+    color: #000;
+}
+
+/* swipe.js ----------------------------------------- */
+
+.swipe {
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
+    width: 30vw;
+    height: 80vh;
+  }
+  .swipe-wrap {
+    overflow: hidden;
+    position: relative;
+  }
+  .swipe-wrap > div {
+    float: left;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+/* icons ------------------------------------------------------------------------------------ */
+
+#icons {
+    height: 12vh;
+    width: 100%;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+#icons img {
+    width: 50px;
+}
+
+#background-user {
+    height: 50px;
+    background-color: #ffffff;
+}
+
+#progress-user {
+    height: 25px; /* timhle menis mnozstvi "staminy" */
+    background-color: #717171;
+}
+
+#background-dollar {
+    height: 50px;
+    background-color: #ffffff;
+}
+
+#progress-dollar {
+    height: 25px; /* timhle menis mnozstvi "staminy" */
+    background-color: #717171;
+}
+
+#background-knowledge {
+    height: 50px;
+    background-color: #ffffff;
+}
+
+#progress-knowledge {
+    height: 25px; /* timhle menis mnozstvi "staminy" */
+    background-color: #717171;
+}
+
+#background-infrastructure {
+    height: 50px;
+    background-color: #ffffff;
+}
+
+#progress-infrastructure {
+    height: 25px; /* timhle menis mnozstvi "staminy" */
+    background-color: #717171;
+}
+
+/* cards ------------------------------------------------------------------------------- */
+
+#card-container {
+    width: 30vw;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: rgb(111, 111, 111);
+    display: flex;
+    flex-direction: column;
+} 
+
+
+#card {
+    width: 100%;
+    height: 90vh;
+    background-color: rgb(201, 201, 201);
+    margin: 0 auto;
+    
+}
+
+.character-info {
+    text-align: center;
+    margin: 20px 0 5px 0;
+}
+
+
+#img-background {
+    background: #5c6c76;
+    border-radius: 10px;
+    width: 80%;
+    height: 30vh;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+}
+
+#img-path {
+    padding-top: 30px;
+}
+
+#text {
+    text-align: center;
+    width: 100%;
+    font-family: monospace;
+    font-size: 20px;
+    padding: 25px 40px;
+    display: inline-block;
+    height: 20vh;
+}
+
+/* year ----------------------------------------------------------------------------------- */
+
+.year-container {
+    display: flex;
+    width: 100%;  
+    height: 10vh;
+    background-color: rgb(36, 36, 36);
+    justify-content: center;
+    align-items: center;
+}
+
+#year {
+    font-family: monospace;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+/* answers --------------------------------------------------------------------------- */
+
+.yes-container {
+    height: 90vh;
+    background-color: rgb(1, 151, 1);
+}
+
+.no-container {
+    height: 90vh;
+    background-color: rgb(208, 5, 5);
+}
+
+#yes {
+    margin: 0 20px;
+    font-family: monospace;
+    font-size: 35px;
+    display: inline-block;
+}
+
+#no {
+    font-family: monospace;
+    font-size: 35px;
+    margin: 55% 20px;
+}

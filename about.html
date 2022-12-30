@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <script src="https://kit.fontawesome.com/9ee5543575.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/swipejs/2.3.1/swipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <section class="left">
+            <a href="./landingpage.html" class="link"> ← Zpět na hlavní stránku</a>
+            <h1 class="header">POINTA HRY</h1>
+            <p class="text">Jste ředitelem Baťova podniku a pomocí přetahování karet doleva / doprava rozhodujete o budoucnosti vaší firmy. Musíte udržet firmu co nejdéle naživu.</p>
+            <h1 class="header">BODOVACÍ SYSTÉM</h1>
+            <p class="text">To, jak se Vám daří, se odráží ve čtyřech hlavních ukazatelích. První ikona značí spokojenost zaměstnanců, druhá finance vaší firmy, třetí vzdělanost zaměstnanců a poslední celkovou infrastrukturu a vybavení firmy.
+                <br>
+                Po každém úspěšném rozhodnutí se přičte jeden rok ve spodní části karty. Začínáte v roce 1896. V tomto roce Tomáš Baťa založil svou firmu.
+            </p>
+           
+
+        </section>
+        <section id="card-container">
+
+            <div id="icons">
+                <div id="background-user">
+                    <div id="progress-user">
+                        <img src="./icons/user-reverse.png" alt="" srcset="">
+                    </div>
+                </div>
+                <div id="background-dollar">
+                    <div id="progress-dollar">
+                        <img src="./icons/dollar-reverse.png" alt="">
+                    </div>
+                </div>
+                <div id="background-knowledge">
+                    <div id="progress-knowledge">
+                        <img src="./icons/knowledge.png" alt="">
+                    </div>
+                </div>
+                <div id="background-infrastructure">
+                    <div id="progress-infrastructure">
+                        <img src="./icons/infrastructure.png" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <div id="slider" class="swipe">
+                <div class="swipe-wrap">
+                    <div class="no-container"></div>
+                    <div id="card">
+                        <div class="character-info">
+                            <h1 id="role">Rádce</h1>
+                            <p id="name">Milan Ipsum</p>
+                        </div>
+                        <div id="img-background">
+                            <img src="/imgs/Instruktor.png" alt="" id="img-path">
+                        </div>
+                        <p id="text">Tohle je ukázková karta z balíčku BaťaCards. Karty se budou ve hře měnit vždy po tom, když ji přijmete (potáhnutí zprava doleva), nebo odmítnete (zleva doprava).</p>
+                    </div>
+    
+                    <div class="yes-container"></div>
+                </div>
+            </div>
+            <div class="year-container">
+                <p id="year">1896</p>
+            </div>
+        </section>
+        <section class="right">
+            <h1 class="header">KAMPAŇ</h1>
+            <p class="text">Jedná se o edukativní mód hry, kdy odpovídáte
+                na otázky z daného okruhu a na
+                konci zjistíte vaše skóre.
+                <br>
+                Okruhy: Management, Obuvnictví,
+                Informační technologie</p>
+            <h1 class="header">VZNIK HRY</h1>
+            <p class="text">Hra byla vytvořena v rámci programovací soutěže Hackathon, kdy měl  tým programátorů za úkol během 24 hodin vytvořit hru splňující zadané téma.
+                <br>
+                Téma znělo: Vytvořte hru, která by usnadnila Tomáši Baťovi jeho život a podnikání, kdyby žil v dnešní době.
+                <br><br>
+                Hra byla vytvořena třemi studenty druhého ročníku zlínské střední školy Creative Hill College.
+            </p>
+        </section>
+
+    </div>
+
+    <script src="swipe.js"></script>
+    
+</body>
+</html>
