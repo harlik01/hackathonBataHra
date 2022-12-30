@@ -336,6 +336,11 @@
             text-align: center;
             margin: 20px 10%;
         }
+
+        .card-container--start {
+            width: 60vw;
+            margin: 0 20vw;
+        }
 }
 
 @media screen and (max-width: 692px) {
@@ -350,6 +355,15 @@
     #end-container h1 {
         text-align: center;
         margin: 50px;
+    }
+
+    .card-container--start {
+        width: 80vw;
+        margin: 0 10vw;
+    }
+
+    .header {
+        font-size: 40px;
     }
 
 }
@@ -367,7 +381,8 @@
 
     /* start ----------------------- */
 
-    #start-page {
+    /* 
+        #start-page {
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -385,6 +400,20 @@
     .div2 {
         width: 100vw;
         height: 50vh;
+    }
+    */
+
+    .card-container--start {
+        width: 100vw;
+        margin: 0;
+    }
+
+    .header {
+        font-size: 30px;
+    }
+
+    .option h1 {
+        font-size: 40px;
     }
 
     /* end ---------------------- */
